@@ -1,0 +1,24 @@
+def arrange(M, num_list):
+    count_1 = 0
+    count_2 = 0
+    
+    for num in num_list:
+        if num == 1:
+            count_1 += 1
+        elif num == 2:
+            count_2 += 1
+    
+    arranged_list = []
+    for x in range(count_1):
+        arranged_list.append(1)
+    for x in range(count_2):
+        arranged_list.append(2)
+    
+    return arranged_list
+
+input_list = [1, 2, 2, 2, 1, 2, 2]
+M1 = len(input_list)
+output = arrange(M1, input_list)
+for i in range(len(output)):
+    print(output[i], end=" ")
+    
