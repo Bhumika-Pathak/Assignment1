@@ -1,0 +1,25 @@
+
+def reflection(input_str):
+    length = len(input_str)
+    
+    word = ''
+    words = []
+    
+    for i in range(length):
+        if input_str[i] == ' ' or i == length - 1:
+            if i == length - 1:
+                word += input_str[i]
+            words.append(word)
+            word = ''
+        else:
+            word += input_str[i]
+    
+    reversed_words = []
+    for i in range(len(words) - 1, -1, -1):
+        reversed_words.append(words[i])
+    
+    for word in reversed_words:
+        print(word)
+
+input_str = "Welcome to EN2004"
+reflection(input_str)
