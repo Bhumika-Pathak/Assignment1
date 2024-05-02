@@ -1,4 +1,3 @@
-
 def reflection(input_str):
     length = len(input_str)
     
