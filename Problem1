@@ -1,1 +1,13 @@
-#problem1
+##1
+M = int(input()) 
+elements = input() 
+total_sum = 0
+current_number = 0
+for char in elements:
+    if char.isdigit():
+        current_number = current_number * 10 + int(char)
+    elif char == ';':
+        total_sum += current_number
+        current_number = 0
+total_sum += current_number
+print(total_sum)
