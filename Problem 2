@@ -1,0 +1,25 @@
+##2
+M = int(input("Enter the length of the list: ")) 
+print("Enter the elements of the list separated by space:")
+input_string = input()
+N = input("Enter the number you are looking for: ")  
+found = False
+index = 0
+current_num = ""
+for char in input_string:
+    if char.isdigit():
+        current_num += char
+    elif char == ' ':
+        num = int(current_num)
+        if num == int(N):
+            print("Found at index:", index)
+            found = True
+            break
+        index += 1
+        current_num = ""  
+if current_num and not found:
+    num = int(current_num)
+    if num == int(N):
+        print("Found at index:", index)
+    else:
+        print("Better Luck Next Time")
